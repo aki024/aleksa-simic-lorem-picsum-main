@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
-import logo from "../../assets/images/HTEC_Group_logo.png";
+import logo from "../../assets/images/logo.png";
 import Darkmode from "../Darkmode/Darkmode";
 import styles from "../Header/Header.module.scss";
 
@@ -12,11 +12,11 @@ const Header = () => {
       <nav className={styles.navbar}>
         <div className={styles.logo}>
           <a
-            href="https://htecgroup.com/"
+            href="https://google.com/"
             target="_blank"
             rel="noopener noreferrer">
             <figure>
-              <img src={logo} alt="Htec logo" />
+              <img src={logo} alt="logo" />
             </figure>
           </a>
         </div>
