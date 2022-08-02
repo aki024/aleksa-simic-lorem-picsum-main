@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/aleksa-simic-lorem-picsum-main/static/css/main.ac8212ce.css",
-    "main.js": "/aleksa-simic-lorem-picsum-main/static/js/main.d5fef65b.js",
+    "main.js": "/aleksa-simic-lorem-picsum-main/static/js/main.73359437.js",
     "static/js/787.061ce9c9.chunk.js": "/aleksa-simic-lorem-picsum-main/static/js/787.061ce9c9.chunk.js",
     "static/media/logo.png": "/aleksa-simic-lorem-picsum-main/static/media/logo.ae2e3a63657129781aa5.png",
     "index.html": "/aleksa-simic-lorem-picsum-main/index.html",
     "main.ac8212ce.css.map": "/aleksa-simic-lorem-picsum-main/static/css/main.ac8212ce.css.map",
-    "main.d5fef65b.js.map": "/aleksa-simic-lorem-picsum-main/static/js/main.d5fef65b.js.map",
+    "main.73359437.js.map": "/aleksa-simic-lorem-picsum-main/static/js/main.73359437.js.map",
     "787.061ce9c9.chunk.js.map": "/aleksa-simic-lorem-picsum-main/static/js/787.061ce9c9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ac8212ce.css",
-    "static/js/main.d5fef65b.js"
+    "static/js/main.73359437.js"
   ]
 }
