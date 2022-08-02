@@ -1,0 +1,43 @@
+@import "../../styles/_variables";
+
+.card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid $dark-color;
+  background-color: $card-background;
+  border-radius: 0.25rem;
+  color: $text-color;
+
+  .top {
+    display: flex;
+    padding: 0.5rem;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+  }
+
+  .image {
+    border: 1px solid $dark-color;
+    height: 200px;
+
+    img {
+      cursor: pointer;
+      min-width: 100%;
+      max-width: 100%;
+      object-fit: fill;
+      max-height: 100%;
+      min-height: 100%;
+      display: block;
+    }
+  }
+
+  .authorName {
+    padding: 0.75rem;
+  }
+}
+
+[data-theme="dark"] {
+  .card {
+    background-color: darken($card-background, 30%);
+  }
+}

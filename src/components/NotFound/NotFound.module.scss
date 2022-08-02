@@ -1,0 +1,42 @@
+@import "../../styles/_variables";
+
+.notFound {
+  text-align: center;
+
+  button {
+    margin-top: 2rem;
+    background-color: $primary-color;
+    border-radius: 6px;
+    border: 1px solid $primary-color;
+    cursor: pointer;
+    color: $text-color;
+    font-size: 21px;
+    font-weight: bold;
+    padding: 14px 47px;
+
+    &:hover {
+      background: linear-gradient(
+        to bottom,
+        $primary-color 5%,
+        darken($primary-color, 20%)
+      );
+    }
+  }
+}
+
+[data-theme="dark"] {
+  .notFound {
+    button {
+      background-color: darken($primary-color, 30%);
+      border: 1px solid darken($primary-color, 30%);
+
+      &:hover {
+        background: linear-gradient(
+          to bottom,
+          darken($primary-color, 30%) 5%,
+          darken($primary-color, 20%)
+        );
+      }
+    }
+  }
+}

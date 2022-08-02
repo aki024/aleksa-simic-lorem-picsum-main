@@ -1,0 +1,232 @@
+@import "../../styles/variables";
+
+.backDrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1100;
+  padding: 1rem;
+  transition: background-color 0.25s ease-in-out;
+  background-color: rgba($color: $dark-color, $alpha: 0.3);
+  display: flex;
+  align-items: center;
+
+  .card {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    flex: 1;
+    height: 85vh;
+    margin-top: 1rem;
+    flex-direction: column;
+    border: 1px solid $dark-color;
+    transition: background-color 0.25s ease-in-out;
+    background-color: $card-background;
+    border-radius: 0.25rem;
+    color: $text-color;
+
+    .top {
+      display: flex;
+      padding: 0.5rem;
+      gap: 1rem;
+      justify-content: flex-end;
+      align-items: center;
+      border-bottom: 1px solid $dark-color;
+      position: relative;
+
+      .closeIcon {
+        font-size: 1.5rem;
+        cursor: pointer;
+      }
+    }
+
+    .image {
+      background: linear-gradient(45deg, $dark-color, transparent);
+      height: 70vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex: 1;
+
+      img {
+        cursor: auto;
+        min-width: 100%;
+        max-width: 100%;
+        object-fit: contain;
+        max-height: 100%;
+        min-height: 100%;
+        display: block;
+      }
+    }
+
+    .authorName {
+      padding: 0.75rem;
+    }
+  }
+
+  .customizeCard {
+    @extend .card;
+    justify-content: space-between;
+
+    .top {
+      border-bottom: none;
+    }
+
+    .image {
+      overflow: hidden;
+      height: 65vh;
+      border-top: 1px solid $dark-color;
+    }
+
+    .customize {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 0.5rem;
+      padding: 0.5rem;
+
+      .blur,
+      .grayscale {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+    }
+  }
+}
+
+.random {
+  @extend .backDrop;
+  background-color: rgba($color: $dark-color, $alpha: 0);
+  z-index: 0;
+}
+
+@media (hover: hover) {
+  .card {
+    .top {
+      .closeIcon {
+        &:hover {
+          fill: $dark-color;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (orientation: landscape) and (max-height: 640px) {
+  .backDrop {
+    z-index: 1100;
+    padding: 0;
+
+    .card {
+      height: 100vh;
+      margin-top: 0;
+      top: 0;
+
+      .image {
+        height: 75vh;
+      }
+    }
+
+    .customizeCard {
+      justify-content: normal;
+
+      .image {
+        flex: none;
+      }
+
+      .authorName {
+        position: absolute;
+        bottom: 0;
+      }
+    }
+
+    .customize {
+      .blur {
+        position: absolute;
+        left: 0;
+        padding: 0.2rem;
+        top: 0;
+      }
+
+      .grayscale {
+        position: absolute;
+        top: 0;
+        padding: 0.2rem;
+        left: 25vw;
+      }
+    }
+  }
+
+  .random {
+    z-index: 9;
+    .card {
+      height: 87vh;
+      margin-top: 1rem;
+      top: 5vh;
+
+      .image {
+        height: 65vh;
+      }
+
+      .authorName {
+        padding: 0.5rem;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .backDrop {
+    .customizeCard {
+      .customize {
+        justify-content: center;
+        gap: 3rem;
+
+        input {
+          width: 20vw;
+        }
+      }
+    }
+  }
+}
+
+@media (min-height: 850px) {
+  .backDrop {
+    .card {
+      height: 80vh;
+    }
+
+    .customizeCard {
+      height: 80vh;
+
+      .image {
+        height: 65vh;
+        flex: 1;
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .backDrop {
+    .customizeCard {
+      height: 80vh;
+
+      .image {
+        height: 60vh;
+      }
+    }
+  }
+}
+
+[data-theme="dark"] {
+  .backDrop {
+    .card {
+      transition: background-color 0.25s ease-in-out;
+      background-color: darken($card-background, 30%);
+    }
+  }
+}

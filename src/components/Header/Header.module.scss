@@ -1,0 +1,170 @@
+@import "../../styles/_variables.scss";
+
+.navbar {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+  background-color: darken($primary-color, 20%);
+  width: 100%;
+  z-index: 10;
+
+  .logo {
+    margin: 1.25rem 0;
+
+    img {
+      max-height: 1.4rem;
+      margin: 0 1rem;
+    }
+  }
+
+  .toggleButton {
+    position: absolute;
+    top: 1.25rem;
+    right: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    cursor: pointer;
+    margin: 0 1rem;
+
+    .bar {
+      height: 3px;
+      width: 100%;
+      background-color: $light-color;
+      border-radius: 10px;
+    }
+  }
+
+  .navLinks {
+    display: none;
+  }
+
+  .navLinksMobile {
+    display: flex;
+    border-top: 1px solid darken($primary-color, 30%);
+    width: 100%;
+    background-color: darken($primary-color, 20);
+    z-index: 100;
+
+    .link {
+      color: $text-color;
+    }
+
+    .linkActive {
+      background-color: rgb(114, 200, 250);
+
+      color: $text-color;
+    }
+
+    ul {
+      flex-direction: column;
+      width: 100%;
+    }
+
+    li {
+      text-align: center;
+      list-style: none;
+    }
+
+    a {
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      display: block;
+    }
+  }
+
+  .darkMode {
+    position: absolute;
+    top: 1.25rem;
+    right: 6rem;
+  }
+}
+
+@media (hover: hover) {
+  .navbar {
+    .navLinks {
+      a {
+        &:hover {
+          color: darken($secondary-color, 50%);
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 360px) {
+  .navbar {
+    height: 60px;
+
+    .logo {
+      margin: 0;
+
+      img {
+        margin: 1rem 0 0 3rem;
+        max-height: 2rem;
+      }
+    }
+  }
+}
+
+@media (min-width: 680px) {
+  .navbar {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    .logo {
+      margin: 0 0 0 3rem;
+
+      img {
+        margin: 0;
+      }
+    }
+
+    .toggleButton {
+      display: none;
+    }
+
+    .navLinks {
+      display: block;
+      margin: 0 3rem 0 0;
+
+      ul {
+        display: flex;
+        gap: 2rem;
+      }
+
+      li {
+        list-style: none;
+      }
+
+      a {
+        padding: 0.5rem 1rem;
+        text-decoration: none;
+        font-size: 1rem;
+        display: block;
+        color: $text-color;
+      }
+
+      .linkActive {
+        border-bottom: 2px solid $light-color;
+      }
+    }
+
+    .darkMode {
+      position: static;
+      margin: 0 3rem 0 0;
+    }
+  }
+}
+
+[data-theme="dark"] {
+  .navbar {
+    background-color: darken($primary-color, 30%);
+  }
+}

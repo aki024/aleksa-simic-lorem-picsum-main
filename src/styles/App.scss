@@ -1,0 +1,58 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import "./variables";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+#root {
+  height: 100vh;
+  display: flex;
+  align-items: stretch;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.swal-overlay {
+  background-color: rgba($color: $dark-color, $alpha: 0);
+}
+
+.swal-modal {
+  &.swal {
+    background-color: $primary-color;
+    height: 50px;
+    width: 250px;
+
+    .swal-text {
+      margin: 1rem auto;
+      color: $light-color;
+      font-size: 1rem;
+    }
+  }
+}
+
+[data-theme="dark"] {
+  transition: all 0.25s ease-in-out;
+  background-color: $tetriary-color;
+
+  .swal-modal {
+    background-color: $tetriary-color;
+
+    .swal-title,
+    .swal-text {
+      color: $light-color;
+    }
+
+    .swal-button {
+      background-color: darken($primary-color, 30%);
+    }
+  }
+}
+
+[data-theme="light"] {
+  transition: all 0.25s ease-in-out;
+  background-color: $light-color;
+}

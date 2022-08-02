@@ -1,0 +1,50 @@
+@import "../../styles/variables";
+
+.text {
+  margin: 0 auto;
+  color: $dark-color;
+  text-align: center;
+}
+
+.cardContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 340px) {
+  .cardContainer {
+    grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+  }
+}
+
+@media (min-width: 440px) {
+  .cardContainer {
+    grid-template-columns: repeat(auto-fill, minmax(430px, 1fr));
+  }
+}
+
+@media (min-width: 600px) {
+  .cardContainer {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  }
+}
+
+@media (min-width: 800px) {
+  .cardContainer {
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  }
+}
+
+@media (min-width: 1600px) {
+  .cardContainer {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+[data-theme="dark"] {
+  .text {
+    color: $text-color;
+  }
+}

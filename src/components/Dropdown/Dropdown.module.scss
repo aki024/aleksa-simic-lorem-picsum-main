@@ -1,0 +1,60 @@
+@import "../../styles/_variables";
+
+.icon {
+  font-size: 2rem;
+}
+
+.dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: $card-background;
+  border-top: 1px solid $dark-color;
+  z-index: 1;
+  &.fullscreen {
+    right: 5vh;
+  }
+
+  li {
+    list-style-type: none;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+    font-size: 1rem;
+  }
+}
+
+@media (hover: hover) {
+  .icon {
+    &:hover {
+      fill: $dark-color;
+      cursor: pointer;
+    }
+  }
+
+  .dropdownIcon {
+    &:hover {
+      filter: brightness(1%);
+      cursor: pointer;
+    }
+  }
+
+  .dropdown {
+    &.fullscreen {
+      .dropdownIcon {
+        &:hover {
+          filter: brightness(1%);
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+[data-theme="dark"] {
+  .dropdown {
+    background-color: darken($card-background, 30%);
+  }
+}

@@ -1,0 +1,38 @@
+@import "../../styles/variables";
+
+.random {
+  z-index: 1200;
+  position: fixed;
+  top: 50vh;
+  right: 4vh;
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+  border-radius: 50%;
+  background-color: lighten($card-background, 10%);
+  color: $text-color;
+  text-align: center;
+  font-size: 16px;
+  border: none;
+}
+
+@media (hover: hover) {
+  .random {
+    &:hover {
+      background-color: darken($card-background, 20%);
+    }
+  }
+}
+
+[data-theme="dark"] {
+  .random {
+    background-color: $tetriary-color;
+  }
+  @media (hover: hover) {
+    .random {
+      &:hover {
+        background-color: darken($tetriary-color, 20%);
+      }
+    }
+  }
+}

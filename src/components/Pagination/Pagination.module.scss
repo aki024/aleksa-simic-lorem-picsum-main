@@ -1,0 +1,47 @@
+@import "../../styles/_variables";
+
+.pagination {
+  display: flex;
+  padding: 1rem;
+  justify-content: center;
+
+  li {
+    list-style-type: none;
+  }
+
+  button {
+    border: 0px;
+    padding: 8px 16px;
+    cursor: pointer;
+    &:hover:not(.active) {
+      background-color: $pagination-hover;
+    }
+    &:disabled {
+      cursor: not-allowed;
+    }
+  }
+
+  .pageNumber {
+    color: $dark-color;
+  }
+
+  .active {
+    background-color: $primary-color;
+    color: $text-color;
+  }
+}
+
+[data-theme="dark"] {
+  .pagination {
+    button {
+      transition: all 0.25s ease-in;
+      background-color: $card-background;
+      color: $tetriary-color;
+    }
+
+    .active {
+      background-color: $slider-color;
+      color: $light-color;
+    }
+  }
+}

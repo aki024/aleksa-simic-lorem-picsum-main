@@ -1,0 +1,26 @@
+@import "../../styles/_variables.scss";
+
+.footer {
+  font-size: 0.9rem;
+  background-color: darken($primary-color, 20%);
+  width: 100%;
+  padding: 1.5rem;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  color: $text-color;
+  justify-content: space-between;
+  z-index: 8;
+}
+
+@media (min-width: 290px) {
+  .footer {
+    font-size: 1rem;
+  }
+}
+
+[data-theme="dark"] {
+  .footer {
+    background-color: darken($primary-color, 30%);
+  }
+}

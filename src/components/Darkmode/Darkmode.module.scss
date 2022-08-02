@@ -1,0 +1,68 @@
+@import "../../styles/variables";
+
+.toggleThemeWrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 4px;
+
+  p {
+    display: none;
+    color: $text-color;
+  }
+
+  .toggleTheme {
+    position: relative;
+    display: inline-block;
+    height: 24px;
+    width: 50px;
+
+    input {
+      display: none;
+    }
+  }
+
+  .slider {
+    background-color: $slider-background;
+    position: absolute;
+    cursor: pointer;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    transition: 0.2s;
+
+    &:before {
+      background-color: $light-color;
+      content: "";
+      height: 24px;
+      position: absolute;
+      transition: 0.4s;
+      width: 24px;
+    }
+  }
+
+  input:checked + .slider:before {
+    transform: translateX(26px);
+  }
+
+  input:checked + .slider {
+    background-color: $slider-color;
+  }
+
+  .slider.round {
+    border-radius: 34px;
+  }
+
+  .slider.round:before {
+    border-radius: 50%;
+  }
+}
+
+@media (min-width: 800px) {
+  .toggleThemeWrapper {
+    p {
+      display: block;
+    }
+  }
+}

@@ -1,0 +1,27 @@
+@import "../../styles/variables";
+
+.likeIcon {
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.likedPhoto {
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 0;
+  fill: $like-color;
+}
+
+@media (hover: hover) {
+  .likeIcon {
+    &:hover {
+      fill: darken($like-color, 30%);
+    }
+  }
+
+  .likedPhoto {
+    &:hover {
+      fill: darken($like-color, 30%);
+    }
+  }
+}
