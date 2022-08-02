@@ -50,7 +50,7 @@ const All = () => {
           }
         });
     } else {
-      navigate("/aleksa-simic-lorem-picsum-main/notfound", { replace: true });
+      navigate("/notfound", { replace: true });
     }
 
     return () => controller.abort();

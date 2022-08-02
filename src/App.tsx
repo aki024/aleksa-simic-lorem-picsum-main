@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter, HashRouter } from "react-router-dom";
 import { LikedPhotosContext } from "./context/likedPhotoContext";
 import { Picture } from "./models/Picture.model";
 import Footer from "./components/Footer/Footer";
@@ -18,13 +18,13 @@ function App() {
   }, []);
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Header />
       <LikedPhotosContext.Provider value={{ likedPhotos, setLikedPhotos }}>
         <Routing />
       </LikedPhotosContext.Provider>
       <Footer />
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
