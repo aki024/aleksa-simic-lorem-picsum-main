@@ -10,7 +10,7 @@ The API used is [Lorem Picsum API](https://picsum.photos/)
 
 ### `Browse Pictures`
 
-There are 900 images in total and the application displays 12 images.
+There are 900 images in total and the application displays 12 images per page.
 
 To go through the images, you can either click on the pagination numbers on the bottom of the page.
 Or you can type in a page number in the URL search query.(i.e., ?page=70).
