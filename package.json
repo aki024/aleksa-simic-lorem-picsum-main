@@ -2,7 +2,7 @@
   "name": "aleksa-simic-lorem-picsum",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://aki024.github.io/aleksa-simic-lorem-picsum-main",
+  "homepage": "https://aki024.github.io/all?page=1",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
