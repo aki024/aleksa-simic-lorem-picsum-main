@@ -9,15 +9,24 @@ const Routing = () => {
   return (
     <main className={styles.mainContainer}>
       <Routes>
-        <Route path="/" element={<Navigate to="/all?page=1" />} />
         <Route
-          path="/aleksa-simic-lorem-picsum-main"
-          element={<Navigate to="/all?page=1" />}
+          path="/aleksa-simic-lorem-picsum-main/"
+          element={<Navigate to="/aleksa-simic-lorem-picsum-main/all?page=1" />}
         />
-        <Route path="/all" element={<All />} />
-        <Route path="/random" element={<Random />} />
-        <Route path="/favorite" element={<Favorite />} />
-        <Route path="*" element={<NotFound />} />
+
+        <Route path="/aleksa-simic-lorem-picsum-main/all" element={<All />} />
+        <Route
+          path="/aleksa-simic-lorem-picsum-main/random"
+          element={<Random />}
+        />
+        <Route
+          path="/aleksa-simic-lorem-picsum-main/favorite"
+          element={<Favorite />}
+        />
+        <Route
+          path="/aleksa-simic-lorem-picsum-main/*"
+          element={<NotFound />}
+        />
       </Routes>
     </main>
   );
