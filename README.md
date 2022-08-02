@@ -1,7 +1,9 @@
 # Lorem Picsum Web App
 
 This project was made as a part of my Frontend Internship.
+
 This app is made in ReactJS framework using TypeScript.
+
 The API used is [Lorem Picsum API](https://picsum.photos/)
 
 ## Features
