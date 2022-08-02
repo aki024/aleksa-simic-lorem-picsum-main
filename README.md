@@ -1,46 +1,57 @@
-# Getting Started with Create React App
+# Lorem Picsum Web App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was made as a part of my Frontend Internship.
+This app is made in ReactJS framework using TypeScript.
+The API used is [Lorem Picsum API](https://picsum.photos/)
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+### `Browse Pictures`
 
-### `npm start`
+There are 900 images in total and the application displays 12 images.\
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+To go through the images you can either click on the pagination numbers on the bottom of the page.
+Or you can type in a page number in the URL search query.(i.e. ?page=70).\
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+If you type in a wrong page number you will be send to the Redirect page.
 
-### `npm test`
+### `Darkmode`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+By the default the app will detect your systems preferred color theme and will load that(light or dark).\
+By clicking on the darkmode toggle button you can change your prefered color theme.\
+This color theme is saved in your local storage so the next time you visit this website your theme will be the same.
 
-### `npm run build`
+### `Like pictures`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+To like an image you can click the heart icon.\
+Maximum amount of images you can like is 5.\
+If you like more than 5 images you will be shown a notification.\
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### `Favorites page`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+To view your liked images you can go to favorites page.\
+There you will be shown your liked images and you have the option to unlike them.\
+The images you've liked are stored localy so the next time you visit this app they will remain the same.
 
-### `npm run eject`
+### `Fullscreen`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+To view the image in fullscreen you can simply click on it.\
+To exit the fullscreen view either press escape on your keyboard or click the 'x' button.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### `DropDown menu`
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+**Dropdown menu consists of 3 features `Save`,`Share` and `Customize` **
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+`Save`
+Clicking on this icon saves the image on your computer.\
 
-## Learn More
+`Share`
+Clicking on this icon copies the link to your clipboard.\
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+`Customize`
+Clicking on this icon opens a customize menu that you can use to change the pictures blur and grayscale.\
+While in this mode you get another option in your dropdown - `Save customized image` which allows you to save your customized image.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### `Random page`
+
+Once you click on this page you are shown a random picture from the API,all other features remain the same.
