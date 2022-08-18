@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/aleksa-simic-lorem-picsum-main/static/css/main.3d49641b.css",
-    "main.js": "/aleksa-simic-lorem-picsum-main/static/js/main.0275f70f.js",
+    "main.css": "/aleksa-simic-lorem-picsum-main/static/css/main.cb3b2aad.css",
+    "main.js": "/aleksa-simic-lorem-picsum-main/static/js/main.394a7a88.js",
     "static/js/787.061ce9c9.chunk.js": "/aleksa-simic-lorem-picsum-main/static/js/787.061ce9c9.chunk.js",
     "static/media/logo.png": "/aleksa-simic-lorem-picsum-main/static/media/logo.ff52785d617a000a6563.png",
     "index.html": "/aleksa-simic-lorem-picsum-main/index.html",
-    "main.3d49641b.css.map": "/aleksa-simic-lorem-picsum-main/static/css/main.3d49641b.css.map",
-    "main.0275f70f.js.map": "/aleksa-simic-lorem-picsum-main/static/js/main.0275f70f.js.map",
+    "main.cb3b2aad.css.map": "/aleksa-simic-lorem-picsum-main/static/css/main.cb3b2aad.css.map",
+    "main.394a7a88.js.map": "/aleksa-simic-lorem-picsum-main/static/js/main.394a7a88.js.map",
     "787.061ce9c9.chunk.js.map": "/aleksa-simic-lorem-picsum-main/static/js/787.061ce9c9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3d49641b.css",
-    "static/js/main.0275f70f.js"
+    "static/css/main.cb3b2aad.css",
+    "static/js/main.394a7a88.js"
   ]
 }
