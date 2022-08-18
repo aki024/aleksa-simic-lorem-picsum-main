@@ -114,33 +114,34 @@ const ImageDetail = ({
             />
           )}
         </div>
-        {customize && (
-          <div className={styles.customize}>
-            <div className={styles.blur}>
-              <p>Blur</p>
-              <input
-                type="range"
-                value={blur}
-                min={0}
-                step={0.1}
-                max={10}
-                onChange={(e) => setBlur(+e.target.value)}
-              />
-            </div>
-            <div className={styles.grayscale}>
-              <p>Grayscale</p>
-              <input
-                type="range"
-                value={grayscale}
-                min={0}
-                max={100}
-                onChange={(e) => setGrayscale(+e.target.value)}
-              />
-            </div>
-          </div>
-        )}
+
         <div className={styles.authorName}>
           <p>{author}</p>
+          {customize && (
+            <div className={styles.customize}>
+              <div className={styles.blur}>
+                <p>Blur</p>
+                <input
+                  type="range"
+                  value={blur}
+                  min={0}
+                  step={0.1}
+                  max={10}
+                  onChange={(e) => setBlur(+e.target.value)}
+                />
+              </div>
+              <div className={styles.grayscale}>
+                <p>Grayscale</p>
+                <input
+                  type="range"
+                  value={grayscale}
+                  min={0}
+                  max={100}
+                  onChange={(e) => setGrayscale(+e.target.value)}
+                />
+              </div>
+            </div>
+          )}
         </div>
       </div>
     </div>

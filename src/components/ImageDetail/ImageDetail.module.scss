@@ -63,6 +63,9 @@
 
     .authorName {
       padding: 0.75rem;
+      display: flex;
+      align-items: flex-end;
+      gap: 50vh;
     }
   }
 
@@ -83,9 +86,7 @@
     .customize {
       display: flex;
       justify-content: space-between;
-      align-items: center;
-      margin-top: 0.5rem;
-      padding: 0.5rem;
+      align-items: flex-end;
 
       .blur,
       .grayscale {
@@ -200,7 +201,7 @@
     }
 
     .customizeCard {
-      height: 80vh;
+      height: 85vh;
 
       .image {
         height: 65vh;
@@ -213,7 +214,7 @@
 @media (min-width: 1024px) {
   .backDrop {
     .customizeCard {
-      height: 80vh;
+      height: 85vh;
 
       .image {
         height: 60vh;
