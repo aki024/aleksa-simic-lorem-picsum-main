@@ -64,8 +64,9 @@
     .authorName {
       padding: 0.75rem;
       display: flex;
-      align-items: flex-end;
-      gap: 50vh;
+      align-items: flex-start;
+      flex-direction: column;
+      gap: 0.5rem;
     }
   }
 
@@ -83,10 +84,15 @@
       border-top: 1px solid $dark-color;
     }
 
+    .authorName {
+      align-items: center;
+    }
+
     .customize {
       display: flex;
       justify-content: space-between;
       align-items: flex-end;
+      gap: 0.5rem;
 
       .blur,
       .grayscale {
@@ -129,6 +135,9 @@
       .image {
         height: 75vh;
       }
+      .authorName {
+        align-items: flex-start;
+      }
     }
 
     .customizeCard {
@@ -139,8 +148,7 @@
       }
 
       .authorName {
-        position: absolute;
-        bottom: 0;
+        align-items: flex-start;
       }
     }
 
@@ -190,6 +198,11 @@
           width: 20vw;
         }
       }
+      .authorName {
+        gap: 10vw;
+        flex-direction: row;
+        align-items: flex-end;
+      }
     }
   }
 }
@@ -218,6 +231,9 @@
 
       .image {
         height: 60vh;
+      }
+      .authorName {
+        gap: 20vw;
       }
     }
   }
