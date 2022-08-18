@@ -1,18 +1,18 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { useNavigate, useSearchParams } from "react-router-dom";
 import axios from "axios";
 import swal from "sweetalert";
 import styles from "./All.module.scss";
 import Card from "../../components/Card/Card";
-import Pagination from "../../components/Pagination/Pagination";
 import { Picture } from "../../models/Picture.model";
 import { LoadingSpinner } from "../../components/LoadingSpinner/LoadingSpinner";
 import { BASE_URL } from "../../util/constants";
+import { CurrentPageContext } from "../../context/currentPageContext";
 
 const All = () => {
   const [pictures, setPictures] = useState<Picture[]>([]);
   const [loading, setLoading] = useState<boolean>(false);
-  const [currentPage, setCurrentPage] = useState<number>(1);
+  const { setCurrentPage } = useContext(CurrentPageContext);
 
   const navigate = useNavigate();
   const [searchParams] = useSearchParams();
@@ -54,7 +54,7 @@ const All = () => {
     }
 
     return () => controller.abort();
-  }, [searchParams, navigate]);
+  }, [searchParams, navigate, setCurrentPage]);
 
   if (loading) {
     return <LoadingSpinner loading={loading} />;
@@ -79,7 +79,6 @@ const All = () => {
             );
           })}
       </div>
-      <Pagination currentPage={currentPage} />
     </>
   );
 };

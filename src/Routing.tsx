@@ -9,7 +9,7 @@ const Routing = () => {
   return (
     <main className={styles.mainContainer}>
       <Routes>
-        <Route path="/" element={<Navigate to="/all?page=1" />} />
+        <Route path="/" element={<Navigate to="/all?page=10" />} />
         <Route path="/all" element={<All />} />
         <Route path="/random" element={<Random />} />
         <Route path="/favorite" element={<Favorite />} />

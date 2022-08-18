@@ -1,5 +1,6 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { CurrentPageContext } from "../../context/currentPageContext";
 import {
   DIRECTION_CLICK,
   DIRECTION_NEXT,
@@ -8,16 +9,13 @@ import {
 import { getWindowSize } from "../../util/getWindowSize";
 import styles from "./Pagination.module.scss";
 
-interface Props {
-  currentPage: number;
-}
-
 const pageNumbers: Number[] = [];
 for (let i = 1; i <= Math.ceil(900 / 12); i++) {
   pageNumbers.push(i);
 }
 
-const Pagination = ({ currentPage }: Props) => {
+const Pagination = () => {
+  const { currentPage, setCurrentPage } = useContext(CurrentPageContext);
   const [windowSize, setWindowSize] = useState(getWindowSize());
   const [nextPaginateSlice, setNextPaginateSlice] = useState<number>(2);
   const [previousPaginateSlice, setPreviousPaginateSlice] = useState<number>(1);
@@ -39,21 +37,26 @@ const Pagination = ({ currentPage }: Props) => {
   const changePageHandler = (direction?: string, pageNumber?: number) => {
     if (direction === DIRECTION_NEXT) {
       navigate({
-        pathname: "",
+        pathname: "all",
         search: `?page=${currentPage + 1}`,
       });
+      setCurrentPage(currentPage + 1);
     }
     if (direction === DIRECTION_PREVIOUS) {
       navigate({
-        pathname: "",
+        pathname: "all",
         search: `?page=${currentPage - 1}`,
       });
+      setCurrentPage(currentPage - 1);
     }
     if (direction === DIRECTION_CLICK) {
-      navigate({
-        pathname: "",
-        search: `?page=${pageNumber}`,
-      });
+      if (pageNumber) {
+        navigate({
+          pathname: "all",
+          search: `?page=${pageNumber}`,
+        });
+        setCurrentPage(pageNumber);
+      }
     }
   };
 
